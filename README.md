@@ -1,4 +1,4 @@
-Easy optical flow extraction from videos (sequence of images) with GPU
+Easy optical flow extraction from videos on GPU
 =================================================
 
 ### Features
