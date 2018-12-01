@@ -1,0 +1,17 @@
+If you need to install ffmpeg...
+./configure --prefix=/z/home/kylemin/library/ffmpeg --extra-cflags=-I/z/home/kylemin/library/ffmpeg/include --extra-ldflags=-L/z/home/kylemin/library/ffmpeg/lib --bindir=/z/home/kylemin/library/ffmpeg/bin
+make
+make install
+
+
+mkdir build
+cd build
+cmake -D CMAKE_INSTALL_PREFIX=/z/home/kylemin/library/opencv -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_OPENGL=ON -D ENABLE_FAST_MATH=1 -D CUDA_FAST_MATH=1 -D WITH_CUBLAS=1 -DCUDA_USE_STATIC_CUDA_RUNTIME=OFF -DWITH_FFMPEG=ON ..
+make
+
+opencv-2.4.13.6/modules/highgui/src/cap_ffmpeg_impl.hpp -> add the following lines
+
+#define AV_CODEC_FLAG_GLOBAL_HEADER (1 << 22)
+#define CODEC_FLAG_GLOBAL_HEADER AV_CODEC_FLAG_GLOBAL_HEADER
+#define AVFMT_RAWPICTURE 0x0020
+

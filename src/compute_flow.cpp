@@ -54,8 +54,8 @@ int main( int argc, char *argv[] ){
     const char* keys = {
                 "{ h  | help     | false | print help message }"
                 "{ g  | gpuID    |  0    | use this gpu}"
-                "{ d  | dilation |  3    | temporal dilation (1: use neighbouring frames, 2: skip one, 3: skip two)}"
-                "{ b  | bound    |  25   | maximum optical flow for clipping}"
+                "{ d  | dilation |  1    | temporal dilation (1: use neighbouring frames, 2: skip one, 3: skip two)}"
+                "{ b  | bound    |  20   | maximum optical flow for clipping}"
     };
 
     CommandLineParser cmd(argc, argv, keys);
@@ -70,7 +70,7 @@ int main( int argc, char *argv[] ){
     }
 
     string input_folder, input_file;
-    int gpuID = 0, dilation = 3, bound = 25;
+    int gpuID = 0, dilation = 1, bound = 20;
 
     if (argc > 3) {
         input_folder = argv[1];
