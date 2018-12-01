@@ -1,10 +1,10 @@
-GPU based optical flow extraction from videos (sequence of images)
+Easy optical flow extraction from videos (sequence of images) with GPU
 =================================================
 
 ### Features
 Forked from https://github.com/dl-container-registry/furnari-flow
 
-This tool allows to extract optical flow from image sequences. It creates a video where x and y optical flow images are stored side by side. Optical flow is obtained by clipping large displacement. Other options are available, such as dilatation (how much to skip for calculating each optical flow).
+This tool allows to extract optical flow from image sequences with GPU support. It creates a video where x and y optical flow images are stored side by side. Optical flow is obtained by clipping large displacement. Other options are available, such as dilatation (how much to skip for calculating each optical flow).
 
 ### Dependencies:
  * [OpenCV 2.4](http://opencv.org/downloads.html)
