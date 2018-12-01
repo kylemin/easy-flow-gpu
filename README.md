@@ -2,6 +2,7 @@ GPU based optical flow extraction from videos
 =================================================
 
 ### Features
+Forked from https://github.com/dl-container-registry/furnari-flow
 This tool allows to extract optical flow from image sequences. The tool creates a video where x and y optical flow images are stored side by side. Optical flow is obtained by clipping large displacement. Other options are available, such as dilatation (how much to skip for calculating each optical flow).
 
 ### Dependencies:
@@ -29,4 +30,4 @@ The software assumes that all video frames have been extracted in a directory. F
 ```
 ./compute_flow /z/dat list_dir_1.txt 0
 ```
-The above command will read /z/dat/list_dir_1.txt file line by line. Then, it will read an image sequence of /z/dat/Kinetics-400-frames/line1 and save optical flow /z/dat/Kinetics-400-flow/line1/u and /z/dat/Kinetics-400-flow/line1/v.
+The above command will read /z/dat/list_dir_1.txt file line by line. Then, it will read an image sequence of /z/dat/Kinetics-400-frames/line1 and save optical flow /z/dat/Kinetics-400-flow/line1/u and /z/dat/Kinetics-400-flow/line1/v. You can modify `fsrc` and `ftrg` of the source file to change Kinetics-400-frames and Kinetics-400-flow.
